@@ -1,0 +1,53 @@
+.featured-film_background {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(https://image.tmdb.org/t/p/original/3CxUndGhUcZdt1Zggjdb2HkLLQX.jpg);
+	background-attachment: fixed;
+	height: 70vh;
+	width: 100%;
+}
+
+.featured-film_background::before {
+	content: "";
+	position: absolute;
+	height: 70vh;
+	width: 100%;
+	background-image: linear-gradient(
+		to bottom,
+		transparent 70%,
+		black
+	);
+	pointer-events: none;
+}
+
+.featured-film_container {
+	height: 100%;
+	width: 40vw;
+	padding: 2rem;
+	background-image: linear-gradient(to left, transparent, black 60%);
+}
+
+.featured-title {
+	font-size: 1.8em;
+}
+
+.featured-avaliation {
+	font-weight: bold;
+	color: rgb(114, 223, 114);
+}
+
+.featured-synopse {
+	line-height: 22px;
+}
+
+.featured-genres {
+	margin-top: 1rem;
+	color: rgb(158, 158, 158);
+}
+
+.container-films {
+	/* position: relative;
+	top: 60vh; */
+	padding: 2rem;
+}

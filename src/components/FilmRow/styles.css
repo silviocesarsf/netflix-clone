@@ -1,0 +1,22 @@
+.film-row_container {
+	margin: 2rem 0;
+}
+
+.film-row_container h2 {
+	margin-bottom: 1rem;
+}
+
+.film-row_content {
+	overflow: hidden;
+	height: 300px;
+}
+
+.film-row_content img {
+	height: 100%;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.film-row_content img:hover {
+	transform: scale(1.1);
+}

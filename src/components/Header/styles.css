@@ -1,0 +1,44 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to top, transparent, black);
+	z-index: 10;
+	padding: 20px 1.5rem;
+	height: 90px;
+}
+
+.logo-header img {
+	width: 100px;
+}
+
+.navlinks ul li {
+	display: inline-block;
+	margin: 0 1rem;
+	position: relative;
+	right: 30%;
+	font-size: 0.9em;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.navlinks ul li:hover {
+	opacity: 0.8;
+}
+
+.navlinks ul .active {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.icon-user_logged_container {
+	font-size: 1.4em;
+}
+
+.icon {
+	cursor: pointer;
+}
+
+.icon-user_logged_container img {
+	max-height: 40px;
+}
