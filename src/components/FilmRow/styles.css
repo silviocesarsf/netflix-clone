@@ -9,6 +9,39 @@
 .film-row_content {
 	overflow: hidden;
 	height: 300px;
+	scroll-behavior: smooth;
+}
+
+.film-row_left,
+.film-row_right {
+	position: absolute;
+	height: 300px;
+	width: 40px;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: 0.2s;
+	opacity: 0;
+}
+
+.film-row_left:hover {
+	opacity: 1;
+}
+
+.film-row_right:hover {
+	opacity: 1;
+}
+
+.film-row_left {
+	left: 2%;
+	background-image: linear-gradient(to left, transparent, black);
+}
+
+.film-row_right {
+	right: 2%;
+	background-image: linear-gradient(to right, transparent, black);
 }
 
 .film-row_content img {

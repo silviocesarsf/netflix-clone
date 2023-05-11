@@ -17,6 +17,10 @@ export const GlobalStyles = createGlobalStyle`
         background-color: #000;
         color: white;
         overflow-x: hidden;
+        -webkit-user-select: none;
+        -moz-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none; 
     }
 
     button {

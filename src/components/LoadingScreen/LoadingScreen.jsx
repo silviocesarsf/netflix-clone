@@ -15,7 +15,7 @@ const LoadingScreen = () => {
 			height="100vh"
 			width="100%"
 			dir="column"
-            gap="30px"
+			gap="30px"
 		>
 			<Oval
 				height={80}

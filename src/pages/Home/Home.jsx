@@ -7,6 +7,7 @@ import { Section } from "../../styles/Section/Section";
 import PlayButton from "../../components/Buttons/PlayButton";
 import { ListButton } from "../../styles/ListButton/ListButton";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
+import { GrAdd } from "react-icons/gr";
 
 const Home = () => {
 	const [apiData, setApiData] = useState([]);

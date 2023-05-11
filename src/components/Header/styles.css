@@ -3,7 +3,7 @@
 	top: 0;
 	left: 0;
 	background-image: linear-gradient(to top, transparent, black);
-	z-index: 10;
+	z-index: 40;
 	padding: 20px 1.5rem;
 	height: 90px;
 }
@@ -16,7 +16,7 @@
 	display: inline-block;
 	margin: 0 1rem;
 	position: relative;
-	right: 30%;
+	right: 25%;
 	font-size: 0.9em;
 	cursor: pointer;
 	transition: 0.2s;
@@ -37,11 +37,11 @@
 
 .icon {
 	cursor: pointer;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 .icon:hover {
-	opacity: .8;
+	opacity: 0.8;
 }
 
 .icon-user_logged_container img {
