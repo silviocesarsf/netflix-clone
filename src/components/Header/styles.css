@@ -37,6 +37,11 @@
 
 .icon {
 	cursor: pointer;
+	transition: .2s;
+}
+
+.icon:hover {
+	opacity: .8;
 }
 
 .icon-user_logged_container img {
