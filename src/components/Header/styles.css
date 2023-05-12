@@ -69,7 +69,11 @@
 }
 
 @media (max-width: 843px) {
-	.navlinks ul li {
+	.navlinks {
 		display: none;
+	}
+
+	.icon-user_logged_container {
+		margin-right: 0;
 	}
 }

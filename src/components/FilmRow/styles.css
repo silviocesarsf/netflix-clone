@@ -7,9 +7,14 @@
 }
 
 .film-row_content {
-	overflow: hidden;
+	overflow-x: scroll;
+	overflow-y: hidden;
 	height: 300px;
 	scroll-behavior: smooth;
+}
+
+.film-row_content::-webkit-scrollbar {
+	display: none;
 }
 
 .film-row_left,

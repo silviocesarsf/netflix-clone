@@ -12,6 +12,11 @@ export const GlobalStyles = createGlobalStyle`
         outline: none;
     }
 
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     body {
         font-family: "Roboto", sans-serif;
         background-color: #000;

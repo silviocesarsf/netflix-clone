@@ -38,7 +38,11 @@ const Header = () => {
 				className="icon-user_logged_container"
 			>
 				<HiOutlineBell className="icon" />
-				<img onClick={handleOpenPopup} src={userIcon} alt="Icone do usuário logado" />
+				<img
+					onClick={handleOpenPopup}
+					src={userIcon}
+					alt="Icone do usuário logado"
+				/>
 				{openPopup && <Popup />}
 			</Container>
 		</Container>
