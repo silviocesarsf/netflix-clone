@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "../../styles/Container/Container";
 import "./styles.css";
 import Logo from "../../assets/NetflixLogoSvg.svg";
 import userIcon from "../../assets/user_icons/ProfileCard.svg";
 import { HiOutlineBell } from "react-icons/hi";
+import Popup from "../Popup/Popup";
 
 const Header = () => {
+	const [openPopup, setOpenPopup] = useState(false);
+
+	const handleOpenPopup = () => {
+		setOpenPopup(!openPopup);
+	};
+
 	return (
 		<Container
 			className="header"
@@ -31,7 +38,8 @@ const Header = () => {
 				className="icon-user_logged_container"
 			>
 				<HiOutlineBell className="icon" />
-				<img src={userIcon} alt="Icone do usuário logado" />
+				<img onClick={handleOpenPopup} src={userIcon} alt="Icone do usuário logado" />
+				{openPopup && <Popup />}
 			</Container>
 		</Container>
 	);

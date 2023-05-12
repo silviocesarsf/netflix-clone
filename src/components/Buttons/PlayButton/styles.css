@@ -1,0 +1,17 @@
+.play-btn {
+	height: 53px;
+	width: 186px;
+	padding: 15px 30px;
+	border-radius: 4px;
+	font-size: 1.4em;
+	cursor: pointer;
+}
+
+@media (max-width: 700px) {
+	.play-btn {
+		font-size: 1em;
+		padding: 5px 20px;
+		height: 43px;
+		width: 136px;
+	}
+}

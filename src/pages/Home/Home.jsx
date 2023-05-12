@@ -4,10 +4,9 @@ import Tmdb from "../../Tmdb";
 import FilmRow from "../../components/FilmRow/FilmRow";
 import { Container } from "../../styles/Container/Container";
 import { Section } from "../../styles/Section/Section";
-import PlayButton from "../../components/Buttons/PlayButton";
-import { ListButton } from "../../styles/ListButton/ListButton";
+import PlayButton from "../../components/Buttons/PlayButton/PlayButton";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
-import { GrAdd } from "react-icons/gr";
+import ListButton from "../../components/Buttons/ListButton/ListButton";
 
 const Home = () => {
 	const [apiData, setApiData] = useState([]);

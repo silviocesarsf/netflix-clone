@@ -22,6 +22,7 @@
 }
 
 .featured-film_container {
+	margin-top: 3rem;
 	height: 100%;
 	width: 40vw;
 	padding: 2rem;
@@ -38,7 +39,7 @@
 }
 
 .featured-synopse {
-	line-height: 22px;
+	line-height: 28px;
 }
 
 .featured-genres {
@@ -47,7 +48,40 @@
 }
 
 .container-films {
-	/* position: relative;
-	top: 60vh; */
-	padding: 2rem;
+	padding: 0 2rem;
+}
+
+@media (max-width: 1000px) {
+	.featured-film_container {
+		width: 60vw;
+	}
+}
+
+@media (max-width: 768px) {
+	.featured-film_container {
+		width: 80vw;
+		padding: 1rem;
+	}
+
+	.container-films {
+		padding: 0 1rem;
+	}
+
+	.featured-title {
+		font-size: 1.5em;
+	}
+
+	.featured-avaliation,
+	.featured-launch {
+		font-size: 0.9em;
+	}
+
+	.featured-synopse {
+		font-size: 0.8em;
+		line-height: 23px;
+	}
+
+	.featured-genres {
+		font-size: 0.8em;
+	}
 }

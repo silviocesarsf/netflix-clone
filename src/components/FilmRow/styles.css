@@ -53,3 +53,18 @@
 .film-row_content img:hover {
 	transform: scale(110%);
 }
+
+@media (max-width: 500px) {
+	.film-row_content {
+		height: 160px;
+	}
+
+	.film-row_container h2 {
+		font-size: 1.2em;
+	}
+
+	.film-row_left,
+	.film-row_right {
+		height: 160px;
+	}
+}

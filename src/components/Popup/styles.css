@@ -1,0 +1,38 @@
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 16.6px solid #1d1d1d;
+	position: absolute;
+	top: -7%;
+}
+
+.popup {
+	background-color: #1d1d1d;
+	padding: 1rem;
+	position: absolute;
+	top: 140%;
+	left: 20%;
+	box-shadow: 1px 2px 3px black;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+.popup ul li {
+	margin: 10px 0;
+	height: 50px;
+	padding: 10px;
+	font-size: 0.5em;
+	text-align: center;
+	cursor: pointer;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.4s;
+}
+
+.popup ul li:hover {
+	background-color: #272727;
+}

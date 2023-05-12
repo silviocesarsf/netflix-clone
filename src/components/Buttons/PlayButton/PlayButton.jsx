@@ -1,20 +1,16 @@
 import React from "react";
-import { Container } from "../../styles/Container/Container";
+import { Container } from "../../../styles/Container/Container";
 import { BiPlay } from "react-icons/bi";
+import "./styles.css";
 
 const PlayButton = ({ children }) => {
 	return (
 		<Container
-			style={{
-				padding: "15px 30px",
-				borderRadius: "4px",
-				fontSize: "1.4em",
-				cursor: "pointer",
-			}}
 			justify="space-between"
 			backgroundColor="#fff"
 			color="black"
 			gap="10px"
+			className="play-btn"
 		>
 			<BiPlay />
 			<p>{children}</p>
