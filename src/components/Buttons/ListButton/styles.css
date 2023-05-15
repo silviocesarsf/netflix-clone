@@ -1,7 +1,7 @@
 .list-btn {
 	height: 53px;
 	width: 186px;
-	border: 1px solid #808080;
+	border: 1px solid #ffffff;
 	padding: 10px 15px;
 	background-color: transparent;
 	color: #fff;
@@ -9,6 +9,7 @@
 	font-family: 500;
 	transition: 0.2s;
 	cursor: pointer;
+	border-radius: 4px;
 }
 
 .list-btn:hover {

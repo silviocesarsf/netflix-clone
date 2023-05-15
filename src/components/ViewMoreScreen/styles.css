@@ -1,0 +1,60 @@
+.view-more_screen_container {
+	min-height: 100vh;
+	width: 100%;
+	backdrop-filter: blur(5px);
+	background-color: #36353546;
+	z-index: 50;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.view-more_screen {
+	height: 75vh;
+	width: 80vw;
+	background-color: rgb(2, 2, 2);
+	z-index: 65;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 2px 3px 5px black;
+	position: relative;
+}
+
+.view-more_header {
+	position: absolute;
+	top: 5%;
+	right: 2%;
+}
+
+.view-more_header a {
+	color: white;
+}
+
+.view-image_movie {
+	width: 40%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.view-details_movie {
+	padding: 2rem;
+	width: 60%;
+}
+
+.view-details_movie .view-title_movie {
+	font-size: 1.6em;
+	width: 80%;
+	line-height: 60px;
+}
+
+.view-title_movie p {
+	font-size: 1.2em;
+}
+
+.view-details_movie p {
+	line-height: 30px;
+}
+
+.view-classification {
+}

@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container } from "../../styles/Container/Container";
 import "./styles.css";
 import Logo from "../../assets/NetflixLogoSvg.svg";
 import userIcon from "../../assets/user_icons/ProfileCard.svg";
 import { HiOutlineBell } from "react-icons/hi";
 import Popup from "../Popup/Popup";
+import { ContextProvider } from "../../context/Context";
+
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+	const { isLogged } = useContext(ContextProvider);
+
 	const [openPopup, setOpenPopup] = useState(false);
 
 	const handleOpenPopup = () => {
@@ -32,19 +37,27 @@ const Header = () => {
 					<li>Navegar por idiomas</li>
 				</ul>
 			</div>
-			<Container
-				gap="30px"
-				justify="space-between"
-				className="icon-user_logged_container"
-			>
-				<HiOutlineBell className="icon" />
-				<img
-					onClick={handleOpenPopup}
-					src={userIcon}
-					alt="Icone do usuário logado"
-				/>
-				{openPopup && <Popup />}
-			</Container>
+			{isLogged ? (
+				<>
+					<Container
+						gap="30px"
+						justify="space-between"
+						className="icon-user_logged_container"
+					>
+						<HiOutlineBell className="icon" />
+						<img
+							onClick={handleOpenPopup}
+							src={userIcon}
+							alt="Icone do usuário logado"
+						/>
+						{openPopup && <Popup />}
+					</Container>
+				</>
+			) : (
+				<NavLink style={{ color: "white" }} to="/login">
+					Faça login
+				</NavLink>
+			)}
 		</Container>
 	);
 };

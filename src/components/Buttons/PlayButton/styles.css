@@ -5,6 +5,11 @@
 	border-radius: 4px;
 	font-size: 1.4em;
 	cursor: pointer;
+	transition: .2s;
+}
+
+.play-btn:hover {
+	background-color: #e7e7e7;
 }
 
 @media (max-width: 700px) {

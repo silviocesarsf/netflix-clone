@@ -4,16 +4,16 @@
 	background-size: cover;
 	background-image: url(https://image.tmdb.org/t/p/original/3CxUndGhUcZdt1Zggjdb2HkLLQX.jpg);
 	background-attachment: fixed;
-	position: relative;
-	bottom: 60px;
-	height: 70vh;
+	height: 100vh;
 	width: 100%;
+	position: relative;
+	bottom: 50px;
 }
 
 .featured-film_background::before {
 	content: "";
 	position: absolute;
-	height: 70vh;
+	height: 100vh;
 	width: 100%;
 	background-image: linear-gradient(
 		to bottom,
@@ -46,7 +46,7 @@
 
 .featured-genres {
 	margin-top: 1rem;
-	color: rgb(158, 158, 158);
+	color: #ffffffb6;
 }
 
 .container-films {

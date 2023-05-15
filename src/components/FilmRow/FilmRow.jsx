@@ -1,4 +1,9 @@
-import React, { useRef } from "react";
+import React, {
+	useContext,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 import "./styles.css";
 import { Container } from "../../styles/Container/Container";
 import Aos from "aos";
@@ -6,8 +11,18 @@ import {
 	HiOutlineChevronLeft,
 	HiOutlineChevronRight,
 } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+import { ContextProvider } from "../../context/Context";
 
 const FilmRow = ({ item, title, setScreenIsLoading }) => {
+	const {
+		setSelectedMovie,
+		selectedMovie,
+		isModalOpen,
+		setIsModalOpen,
+	} = useContext(ContextProvider);
+
+	const navigate = useNavigate();
 	const carousel = useRef(null);
 
 	const disableLoaderScreen = () => {
@@ -24,6 +39,13 @@ const FilmRow = ({ item, title, setScreenIsLoading }) => {
 	const handleRightArrow = (e) => {
 		e.preventDefault();
 		carousel.current.scrollLeft += carousel.current.offsetWidth;
+	};
+
+	const handleImageClick = (item) => {
+		setSelectedMovie("");
+		setIsModalOpen(true);
+		setSelectedMovie((prevData) => [...prevData, item]);
+		console.log(selectedMovie[0]);
 	};
 
 	Aos.init();
@@ -46,12 +68,17 @@ const FilmRow = ({ item, title, setScreenIsLoading }) => {
 				>
 					{item.results.length > 0 &&
 						item.results.map((item, key) => (
-							<img
-								onLoad={disableLoaderScreen}
-								src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
-								alt={item.original_title}
+							<div
+								onClick={() => handleImageClick(item)}
 								key={key}
-							/>
+								className="container-movie"
+							>
+								<img
+									onLoad={disableLoaderScreen}
+									src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+									alt={item.original_title}
+								/>
+							</div>
 						))}
 				</Container>
 				<div

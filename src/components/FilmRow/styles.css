@@ -49,13 +49,17 @@
 	background-image: linear-gradient(to right, transparent, black);
 }
 
-.film-row_content img {
+.film-row_content .container-movie {
 	height: 100%;
 	cursor: pointer;
 	transition: 0.2s;
 }
 
-.film-row_content img:hover {
+.container-movie img {
+	border-radius: 10px;
+}
+
+.film-row_content .container-movie:hover {
 	transform: scale(110%);
 }
 

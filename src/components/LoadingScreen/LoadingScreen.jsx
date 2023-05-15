@@ -1,8 +1,10 @@
 import React from "react";
 import { Container } from "../../styles/Container/Container";
 import { Oval } from "react-loader-spinner";
+import Aos from "aos";
 
 const LoadingScreen = () => {
+	Aos.init();
 	return (
 		<Container
 			style={{
@@ -16,6 +18,7 @@ const LoadingScreen = () => {
 			width="100%"
 			dir="column"
 			gap="30px"
+			data-aos="zoom-out"
 		>
 			<Oval
 				height={80}

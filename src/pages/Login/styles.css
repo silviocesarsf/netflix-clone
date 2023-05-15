@@ -1,0 +1,35 @@
+.login-wrapper {
+	padding: 5rem 2rem;
+	color: #8c8c8c;
+}
+
+.login-container {
+	background-color: rgba(0, 0, 0, 0.945);
+	padding: 60px 68px 40px;
+}
+
+.title-login {
+	color: #fff;
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.forgot-password span {
+	font-weight: 300;
+	font-size: 13px;
+}
+
+.bottom-links h4 {
+	font-weight: 200;
+}
+
+.bottom-links p {
+	font-size: 14px;
+	font-weight: lighter;
+}

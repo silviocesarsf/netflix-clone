@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./styles.css";
 import Tmdb from "../../Tmdb";
 import FilmRow from "../../components/FilmRow/FilmRow";
@@ -7,8 +7,13 @@ import { Section } from "../../styles/Section/Section";
 import PlayButton from "../../components/Buttons/PlayButton/PlayButton";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import ListButton from "../../components/Buttons/ListButton/ListButton";
+import { ContextProvider } from "../../context/Context";
+import ViewMoreScreen from "../../components/ViewMoreScreen/ViewMoreScreen";
 
 const Home = () => {
+	const { isModalOpen, setIsModalOpen } =
+		useContext(ContextProvider);
+
 	const [apiData, setApiData] = useState([]);
 	const [screenIsLoading, setScreenIsLoading] = useState(true);
 
@@ -20,9 +25,13 @@ const Home = () => {
 		loadAll();
 	}, []);
 
+	// Todo:
+	// [] Fazer uma página para os detalhes do filme
+
 	return (
 		<>
 			{screenIsLoading && <LoadingScreen />}
+			{isModalOpen && <ViewMoreScreen />}
 			<Section>
 				<div className="featured-film_background">
 					<Container
