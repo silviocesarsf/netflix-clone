@@ -5,7 +5,6 @@ export const ContextProvider = createContext();
 export const Context = ({ children }) => {
 	const [isLogged, setIsLogged] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [isImageLoading, setIsImageLoading] = useState(true);
 	const [selectedMovie, setSelectedMovie] = useState([]);
 
 	return (
@@ -17,8 +16,6 @@ export const Context = ({ children }) => {
 				setSelectedMovie,
 				isModalOpen,
 				setIsModalOpen,
-				isImageLoading,
-				setIsImageLoading,
 			}}
 		>
 			{children}

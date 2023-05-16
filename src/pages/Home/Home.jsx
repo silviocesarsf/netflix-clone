@@ -26,7 +26,10 @@ const Home = () => {
 	}, []);
 
 	// Todo:
-	// [] Fazer uma página para os detalhes do filme
+	// [x] Fazer uma página para os detalhes do filme
+	// [] Terminar sistema de login e cadastro
+	// [] Terminar sistema de troca de contas
+	// [] Otimizar o código
 
 	return (
 		<>
@@ -41,7 +44,7 @@ const Home = () => {
 						gap="20px"
 					>
 						<h1 className="featured-title">
-							Ant-Man and the Wasp: Quantumania
+							Avatar O Caminho da Água
 						</h1>
 						<Container gap="20px" justify="left">
 							<div className="featured-avaliation">
@@ -53,11 +56,13 @@ const Home = () => {
 							width="100%"
 							className="featured-synopse"
 						>
-							Scott Lang e Hope van Dyne em suas jornadas como
-							super-heróis. Scott e sua família são puxados
-							para o Reino Quântico, onde eles precisarão
-							enfrentar um novo e terrível vilão: Kang, o
-							Conquistador e M.O.D.O.K..
+							decorre uma década após os acontecimentos do
+							primeiro filme e conta a história da família
+							Sully (Jake, Neytiri e os seus filhos), os seus
+							problemas, as longas distâncias que vão percorrer
+							para se manterem a salvo, as batalhas que lutam
+							para se manterem vivos, e as tragédias que
+							suportam.
 						</Container>
 						<Container justify="left" gap="20px">
 							<PlayButton>Assistir</PlayButton>

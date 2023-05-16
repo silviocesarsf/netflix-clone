@@ -2,6 +2,7 @@
     margin-bottom: 1rem;
 }
 
-.social-list {
+.social-list a {
     font-size: 2em;
+    color: white;
 }

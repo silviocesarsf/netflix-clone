@@ -6,6 +6,7 @@ import { Oval } from "react-loader-spinner";
 import { IoIosStarOutline } from "react-icons/io";
 import PlayButton from "../Buttons/PlayButton/PlayButton";
 import ListButton from "../Buttons/ListButton/ListButton";
+import Modal from "../Modal/Modal";
 
 const ViewMoreScreen = () => {
 	const { selectedMovie, setSelectedMovie, setIsModalOpen } =
@@ -21,17 +22,16 @@ const ViewMoreScreen = () => {
 	};
 
 	return (
-		<Container className="view-more_screen_container">
+		<Modal>
 			<Container
-				initial={{ y: 100, opacity: 0 }}
-				animate={{ y: 0, opacity: 1 }}
+				initial={{ y: 100, scale: 0, opacity: 0 }}
+				animate={{ y: 0, scale: 1, opacity: 1 }}
 				transition={{
 					ease: "linear",
-					duration: 0.3,
+					duration: 0.2,
 				}}
 				justify="space-between"
-				align="space-around"
-				className="view-more_screen"
+				className="view-more_content"
 			>
 				<Container
 					className="view-more_header"
@@ -58,6 +58,8 @@ const ViewMoreScreen = () => {
 				<Container
 					dir="column"
 					align="left"
+					justify="space-around"
+					height="100%"
 					gap="30px"
 					className="view-details_movie"
 				>
@@ -70,7 +72,12 @@ const ViewMoreScreen = () => {
 					</div>
 					{selectedMovie[0].overview ? (
 						<p className="synopse">
-							{selectedMovie[0].overview}
+							{selectedMovie[0].overview.length > 230
+								? `${selectedMovie[0].overview.slice(
+										selectedMovie[0],
+										230
+								  )}...`
+								: selectedMovie[0].overview}
 						</p>
 					) : (
 						<p>
@@ -97,13 +104,13 @@ const ViewMoreScreen = () => {
 							{selectedMovie[0].vote_average.toFixed(1)}
 						</h2>
 					</Container>
-					<Container justify="left" gap="20px">
+					<Container className="view-details_buttons" justify="left" gap="20px">
 						<PlayButton>Assistir</PlayButton>
 						<ListButton>Adicionar a lista</ListButton>
 					</Container>
 				</Container>
 			</Container>
-		</Container>
+		</Modal>
 	);
 };
 

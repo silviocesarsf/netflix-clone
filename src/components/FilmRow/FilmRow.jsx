@@ -68,17 +68,13 @@ const FilmRow = ({ item, title, setScreenIsLoading }) => {
 				>
 					{item.results.length > 0 &&
 						item.results.map((item, key) => (
-							<div
+							<img
 								onClick={() => handleImageClick(item)}
 								key={key}
-								className="container-movie"
-							>
-								<img
-									onLoad={disableLoaderScreen}
-									src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
-									alt={item.original_title}
-								/>
-							</div>
+								onLoad={disableLoaderScreen}
+								src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+								alt={item.original_title}
+							/>
 						))}
 				</Container>
 				<div

@@ -49,13 +49,14 @@
 	background-image: linear-gradient(to right, transparent, black);
 }
 
-.film-row_content .container-movie {
-	height: 100%;
+.film-row_content {
+	height: 300px;
 	cursor: pointer;
 	transition: 0.2s;
 }
 
-.container-movie img {
+.film-row_content img {
+	height: 100%;
 	border-radius: 10px;
 }
 
@@ -75,5 +76,9 @@
 	.film-row_left,
 	.film-row_right {
 		height: 160px;
+	}
+
+	.film-row_content img {
+		border: 3px;
 	}
 }
