@@ -9,10 +9,10 @@ import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import ListButton from "../../components/Buttons/ListButton/ListButton";
 import { ContextProvider } from "../../context/Context";
 import ViewMoreScreen from "../../components/ViewMoreScreen/ViewMoreScreen";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
-	const { isModalOpen, setIsModalOpen } =
-		useContext(ContextProvider);
+	const { isModalOpen } = useContext(ContextProvider);
 
 	const [apiData, setApiData] = useState([]);
 	const [screenIsLoading, setScreenIsLoading] = useState(true);
@@ -27,9 +27,9 @@ const Home = () => {
 
 	// Todo:
 	// [x] Fazer uma página para os detalhes do filme
-	// [] Terminar sistema de login e cadastro
+	// [x] Terminar sistema de login e cadastro
 	// [] Terminar sistema de troca de contas
-	// [] Otimizar o código
+	// [x] Otimizar o código
 
 	return (
 		<>
@@ -56,7 +56,7 @@ const Home = () => {
 							width="100%"
 							className="featured-synopse"
 						>
-							decorre uma década após os acontecimentos do
+							Decorre uma década após os acontecimentos do
 							primeiro filme e conta a história da família
 							Sully (Jake, Neytiri e os seus filhos), os seus
 							problemas, as longas distâncias que vão percorrer

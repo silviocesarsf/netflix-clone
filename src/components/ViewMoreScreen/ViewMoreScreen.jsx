@@ -1,4 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, {
+	useContext,
+	useState,
+	useMemo,
+	useCallback,
+} from "react";
 import "./styles.css";
 import { Container } from "../../styles/Container/Container";
 import { ContextProvider } from "../../context/Context";
@@ -12,14 +17,19 @@ const ViewMoreScreen = () => {
 	const { selectedMovie, setSelectedMovie, setIsModalOpen } =
 		useContext(ContextProvider);
 
-	const [notesStyles, setNotesStyles] = useState({
-		color:
-			selectedMovie[0].vote_average <= 5 ? "#c22222" : "#71da40",
-	});
-
-	const handleCloseModal = () => {
+	const handleCloseModal = useCallback(() => {
 		setIsModalOpen(false);
-	};
+	}, [setIsModalOpen]);
+
+	const notesStyles = useMemo(
+		() => ({
+			color:
+				selectedMovie[0].vote_average <= 5
+					? "#c22222"
+					: "#71da40",
+		}),
+		[selectedMovie]
+	);
 
 	return (
 		<Modal>
@@ -104,7 +114,11 @@ const ViewMoreScreen = () => {
 							{selectedMovie[0].vote_average.toFixed(1)}
 						</h2>
 					</Container>
-					<Container className="view-details_buttons" justify="left" gap="20px">
+					<Container
+						className="view-details_buttons"
+						justify="left"
+						gap="20px"
+					>
 						<PlayButton>Assistir</PlayButton>
 						<ListButton>Adicionar a lista</ListButton>
 					</Container>

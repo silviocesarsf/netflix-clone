@@ -29,7 +29,35 @@ export const GlobalStyles = createGlobalStyle`
         user-select: none; 
     }
 
+    body::-webkit-scrollbar { 
+        background-color: black;
+        width: 4px;
+     }
+
+    body::-webkit-scrollbar-thumb { 
+        background-color: white;
+        border-radius: 10px;
+    }
+
+
     button {
         cursor: pointer;
     }
+
+    input[type="date"] {
+        color: #fff;
+        font-family: "Arial";
+        font-size: 16px;
+        padding: 5px 20px;    
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    /* Estilizando o calendário que aparece ao clicar no input */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+    /* Altera a cor do ícone do calendário */
+        display: none;
+    }
+
 `;

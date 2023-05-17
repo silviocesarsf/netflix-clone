@@ -1,14 +1,15 @@
-.login-wrapper {
+.form-wrapper {
 	padding: 5rem 2rem;
 	color: #8c8c8c;
 }
 
-.login-container {
+.form-container {
 	background-color: rgba(0, 0, 0, 0.945);
 	padding: 60px 68px 40px;
+    border-radius: 10px;
 }
 
-.title-login {
+.title-form {
 	color: #fff;
 }
 

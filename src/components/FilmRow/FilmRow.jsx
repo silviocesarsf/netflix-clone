@@ -1,8 +1,9 @@
 import React, {
 	useContext,
-	useEffect,
 	useRef,
 	useState,
+	useEffect,
+	useCallback,
 } from "react";
 import "./styles.css";
 import { Container } from "../../styles/Container/Container";
@@ -41,14 +42,18 @@ const FilmRow = ({ item, title, setScreenIsLoading }) => {
 		carousel.current.scrollLeft += carousel.current.offsetWidth;
 	};
 
-	const handleImageClick = (item) => {
-		setSelectedMovie("");
-		setIsModalOpen(true);
-		setSelectedMovie((prevData) => [...prevData, item]);
-		console.log(selectedMovie[0]);
-	};
+	const handleImageClick = useCallback(
+		(item) => {
+			setSelectedMovie("");
+			setSelectedMovie((prevData) => [...prevData, item]);
+			setIsModalOpen(true);
+		},
+		[setSelectedMovie, setIsModalOpen]
+	);
 
-	Aos.init();
+	useEffect(() => {
+		Aos.init();
+	}, []);
 
 	return (
 		<div className="film-row_container">
